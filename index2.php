@@ -4,10 +4,10 @@ include('connect.php');
 if(isset($_POST['login']))
 {
 
-  $username=mysqli_real_escape_string($mysqli,$_POST['username']);
-  $password=mysqli_real_escape_string($mysqli,$_POST['password']);
+  $username=mysqli_real_escape_string($db,$_POST['username']);
+  $password=mysqli_real_escape_string($db,$_POST['password']);
 
-  $result = mysqli_query($mysqli,"SELECT * FROM members WHERE username = '$username' AND password = '$password'");
+  $result = mysqli_query($db,"SELECT * FROM members WHERE username = '$username' AND password = '$password'");
   $c_rows  =  mysqli_num_rows($result);
 
   if($c_rows==1) { 
@@ -18,12 +18,50 @@ if(isset($_POST['login']))
   }else{ 
     header("location:  index2.php?remark_login=failed");
   }
-
-
-
 } 
 
 ?>
+<?php
+if (isset($_POST['join_us'])) {
+  // receive all input values from the form
+  $username = mysqli_real_escape_string($db, $_POST['username']);
+  $email = mysqli_real_escape_string($db, $_POST['email']);
+  $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
+  $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
+
+  // form validation: ensure that the form is correctly filled ...
+  // by adding (array_push()) corresponding error unto $errors array
+  if (empty($username)) { array_push($errors, "Username is required"); }
+  if (empty($email)) { array_push($errors, "Email is required"); }
+  if (empty($password_1)) { array_push($errors, "Password is required"); }
+  if ($password_1 != $password_2) {
+    array_push($errors, "The two passwords do not match");
+  }
+
+  // first check the database to make sure 
+  // a user does not already exist with the same username and/or email
+  $user_check_query = "SELECT * FROM members WHERE username='$username' OR email='$email' LIMIT 1";
+  $result = mysqli_query($db, $user_check_query);
+  $user = mysqli_fetch_assoc($result);
+  
+ 
+
+  // Finally, register user if there are no errors in the form
+  if (count($errors) == 0) {
+    $password = md5($password_1);//encrypt the password before saving in the database
+
+    $query = "INSERT INTO members (username, email, password) 
+              VALUES('$username', '$email', '$password')";
+    mysqli_query($db, $query);
+    $_SESSION['username'] = $username;
+    $_SESSION['success'] = "You are now logged in";
+    header("location: home.php");
+  }
+}
+ 
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -179,9 +217,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     {
       echo  '<div class="panel panel-danger panel-heading text-center" style="background-color:#C55A43 "><b>Login  Failed!,  Invalid  Credentials</b></div>';
     }
-    else
+    else{
+    }
      ?>
-
     <ul class="nav nav-tabs final-login">
         <li class="active"><a data-toggle="tab" href="#sectionA">Sign In</a></li>
         <li><a data-toggle="tab" href="#sectionB">Join us!</a></li>
@@ -190,10 +228,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div id="sectionA" class="tab-pane fade in active">
         <div class="innter-form">
             <form class="sa-innate-form" method="post" name="loginform" action="index2.php">
-            <label>Username</label>
-            <input type="text" name="username">
-            <label>Password</label>
-            <input type="password" name="password">
+            <input type="text" name="username" placeholder="username">
+            <input type="password" name="password" placeholder="password">
             <button type="submit" name="login">Sign In</button>
             <a href="">Forgot Password?</a>
             </form>
@@ -203,13 +239,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div id="sectionB" class="tab-pane fade">
             <div class="innter-form">
             <form class="sa-innate-form" method="post">
-            <label>Name</label>
-            <input type="text" name="username">
-            <label>Email Address</label>
-            <input type="text" name="username">
-            <label>Password</label>
-            <input type="password" name="password">
-            <button type="submit">Join now</button>
+            <input type="text" name="username" placeholder="Username">
+            <input type="text" name="email" placeholder="Email">
+            <input type="password" name="password_1" placeholder="Password">
+            <input type="password" name="password_2" placeholder="Confirm password">
+            <button type="submit" name="join_us">Join now</button>
             <h5>By clicking Join now, you agree with <br>RUi-Tech's User Agreement, Privacy Policy, and Cookie Policy.</h5>
             </form>
             </div>
