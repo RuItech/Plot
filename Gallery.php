@@ -1,5 +1,5 @@
 <?php
-include('session.php');
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,7 +72,7 @@ include('session.php');
             <div class="ml-auto text-right right-p">
                 <ul>
                     <li class="mr-3">
-                        <span class="fa fa-clock-o"></span> Mon-Sat : 8:00 to 17:00</li>
+                        <span class="fa fa-angellist"></span>For Any inquiry refer to our email</li>
                     <li>
                         <span class="fa fa-envelope-open"></span> <a href="mailto:info@example.com">info@example.com</a> </li>
                 </ul>
@@ -83,19 +83,20 @@ include('session.php');
             <nav class="py-3 d-lg-flex">
                 <div id="logo">
                     <h1>
-                        <a href="index2.html"><img src="images/s2.png" alt=""> RU i-TECH </a>
+                        <a href="home.php"><img src="images/s2.png" alt=""> RU i-TECH </a>
                     </h1>
                 </div>
                 <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
                 <input type="checkbox" id="drop" />
                 <ul class="menu ml-auto mt-1">
-                    <li class="active"><a href="index2.html">Home</a></li>
+                    <li class="active"><a href="home.php">Home</a></li>
                     <li class=""><a href="#about">About</a></li>
                     <li class=""><a href="#projects">Projects</a></li>
                     <li class=""><a href="#activ">Activities</a></li>
                     <li class=""><a href="#testi">Testimonials</a></li>
                     <li class=""><a href="#gall">Gallery</a></li>
                     <li class=""><a href="#subscribe">Subscribe</a></li>
+                    <li class=""><a class="btn btn-warning btn-md" href="logout.php" role="button">logout</a></li>
                 </ul>
             </nav>
             <!-- //nav -->

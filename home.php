@@ -1,9 +1,17 @@
 <?php
-include('session.php');
+ob_start();
+session_start();
+require_once("connect.php");
+if (!isset($_SESSION['email'])) {
+    header("Location: index2.php");
+    exit;
+}
+//select logged in users detail
+$hh =  $_SESSION['email'];
+$res = $db->query("SELECT * FROM members WHERE email='$hh'" );
+$userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
 ?>
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>RU i-TECH</title>
     <!-- for-mobile-apps -->
@@ -45,14 +53,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 
 <body>
-
     <!-- header -->
     <header>
         <div class="top-head container">
             <div class="ml-auto text-right right-p">
                 <ul>
                     <li class="mr-3">
-                        <span class="fa fa-clock-o"></span> Mon-Sat : 0800HRS to 1700HRS</li>
+                        <span class="fa fa-angellist"></span>For Any inquiry refer to our email</li>
                     <li>
                         <span class="fa fa-envelope-open"></span> <a href="ruitech@riarauniversity.ac.ke">ruitech@riarauniversity.ac.ke</a> </li>
                 </ul>
@@ -63,18 +70,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <nav class="py-3 d-lg-flex">
                 <div id="logo">
                     <h1>
-                        <a href="index2.html"><img src="images/s2.png" alt=""> RU i-TECH </a>
+                        <a href="index2.php"><img src="images/s2.png" alt=""> RU i-TECH </a>
                     </h1>
                 </div>
                 <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
                 <input type="checkbox" id="drop" />
                 <ul class="menu ml-auto mt-1">
-                    <li class="active"><a href="index2.html">Home</a></li>
+                    <li class="active"><a href="index2.php">Home</a></li>
                     <li class=""><a href="#about">About</a></li>
                     <li class=""><a href="#services">Our Services</a></li>
                     <li class=""><a href="#testi">Testimonials</a></li>
                     <li class=""><a href="#gallery">Gallery</a></li>
                     <li class=""><a href="#subscribe">Subscribe</a></li>
+                   <li class=""><a class="btn btn-warning btn-md" href="logout.php" role="button">logout</a></li>
                 </ul>
             </nav>
             <!-- //nav -->
@@ -136,7 +144,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <!-- //banner slider-->
                     </div>
                     
-                    <!-- Registration form was here -->
+                     <div class="col-lg-5 col-md-8 px-lg-2 px-0">
+                        <div class="banner-form-w3 ml-lg-5">
+                            <div class="padding">
+                                 <div class="jumbotron">
+        <h2>Hello, <?php echo $userRow['username']; ?></h2>
+        <p>Welcome to Our Club</p>
+        <p><a class="btn btn-primary btn-lg" href="profile.php" role="button">Your profile</a></p>
+    </div>
+                    </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -530,7 +548,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </a>
             </div>
 
-            <a href="Gallery.html" style="margin-left: 500px" class="btn btn-banner my-3">View More</a>
+            <a href="Gallery.php" style="margin-left: 500px" class="btn btn-banner my-3">View More</a>
 
             <!-- </div> -->
         </div>

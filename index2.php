@@ -1,68 +1,36 @@
 <?php
 session_start();
-include('connect.php');
-if(isset($_POST['login']))
-{
-
-  $username=mysqli_real_escape_string($db,$_POST['username']);
-  $password=mysqli_real_escape_string($db,$_POST['password']);
-
-  $result = mysqli_query($db,"SELECT * FROM members WHERE username = '$username' AND password = '$password'");
-  $c_rows  =  mysqli_num_rows($result);
-
-  if($c_rows==1) { 
-    $_SESSION['login_user']=$username;
-
-    header("location:  home.php");
-    
-  }else{ 
-    header("location:  index2.php?remark_login=failed");
-  }
-} 
-
 ?>
+
 <?php
-if (isset($_POST['join_us'])) {
-  // receive all input values from the form
-  $username = mysqli_real_escape_string($db, $_POST['username']);
+include ('connect.php');
+// ... 
+// LOGIN USER
+if (isset($_POST['login'])) {
   $email = mysqli_real_escape_string($db, $_POST['email']);
-  $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
-  $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
-
-  // form validation: ensure that the form is correctly filled ...
-  // by adding (array_push()) corresponding error unto $errors array
-  if (empty($username)) { array_push($errors, "Username is required"); }
-  if (empty($email)) { array_push($errors, "Email is required"); }
-  if (empty($password_1)) { array_push($errors, "Password is required"); }
-  if ($password_1 != $password_2) {
-    array_push($errors, "The two passwords do not match");
+  $password = mysqli_real_escape_string($db, $_POST['password']);
+  if (empty($email)) {
+    array_push($errors, "Email is required");
   }
-
-  // first check the database to make sure 
-  // a user does not already exist with the same username and/or email
-  $user_check_query = "SELECT * FROM members WHERE username='$username' OR email='$email' LIMIT 1";
-  $result = mysqli_query($db, $user_check_query);
-  $user = mysqli_fetch_assoc($result);
-  
- 
-
-  // Finally, register user if there are no errors in the form
+  if (empty($password)) {
+    array_push($errors, "Password is required");
+  }
   if (count($errors) == 0) {
-    $password = md5($password_1);//encrypt the password before saving in the database
-
-    $query = "INSERT INTO members (username, email, password) 
-              VALUES('$username', '$email', '$password')";
-    mysqli_query($db, $query);
-    $_SESSION['username'] = $username;
-    $_SESSION['success'] = "You are now logged in";
-    header("location: home.php");
+    $password = sha1($password);
+    $query = "SELECT * FROM members WHERE email='$email' AND password='$password' LIMIT 1";
+    $results = mysqli_query($db, $query);
+    if (mysqli_num_rows($results) == 1) {
+      $_SESSION['email'] = $email;
+      $_SESSION['username'] = $username;
+      //$_SESSION['success'] = "You are now logged in";
+      header('location: home.php');
+    }else {
+    array_push($errors, header("location:  index2.php?remark_login=failed"));
+    }
   }
 }
- 
 ?>
 
-
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -118,7 +86,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="ml-auto text-right right-p">
                 <ul>
                     <li class="mr-3">
-                        <span class="fa fa-clock-o"></span> Mon-Sat : 0800HRS to 1700HRS</li>
+                        <span class="fa fa-angellist"></span>For Any inquiry refer to our email</li>
                     <li>
                         <span class="fa fa-envelope-open"></span> <a href="ruitech@riarauniversity.ac.ke">ruitech@riarauniversity.ac.ke</a> </li>
                 </ul>
@@ -129,13 +97,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <nav class="py-3 d-lg-flex">
                 <div id="logo">
                     <h1>
-                        <a href="index2.html"><img src="images/s2.png" alt=""> RU i-TECH </a>
+                        <a href="index2.php"><img src="images/s2.png" alt=""> RU i-TECH </a>
                     </h1>
                 </div>
                 <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
                 <input type="checkbox" id="drop" />
                 <ul class="menu ml-auto mt-1">
-                    <li class="active"><a href="index2.html">Home</a></li>
+                    <li class="active"><a href="index2.php">Home</a></li>
                     <li class=""><a href="#about">About</a></li>
                     <li class=""><a href="#services">Our Services</a></li>
                     <li class=""><a href="#testi">Testimonials</a></li>
@@ -211,7 +179,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
      $remarks  =  isset($_GET['remark_login'])  ?  $_GET['remark_login']  :  '';
      if  ($remarks==null  and  $remarks=="")
      {
-      echo  '<div class="panel panel-default panel-heading text-center" style="background-color: #3D7DDE"><b>Registration and login Form</b></div>';
+      echo  '<div class="panel panel-default panel-heading text-center" style="background-color: #3D7DDE"><b>Login Form</b></div>';
     }
     if  ($remarks=='failed')
     {
@@ -220,34 +188,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     else{
     }
      ?>
-    <ul class="nav nav-tabs final-login">
-        <li class="active"><a data-toggle="tab" href="#sectionA">Sign In</a></li>
-        <li><a data-toggle="tab" href="#sectionB">Join us!</a></li>
-    </ul>
+
     <div class="tab-content">
-        <div id="sectionA" class="tab-pane fade in active">
+        
         <div class="innter-form">
             <form class="sa-innate-form" method="post" name="loginform" action="index2.php">
-            <input type="text" name="username" placeholder="username">
-            <input type="password" name="password" placeholder="password">
+            <input type="text" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="password" required>
             <button type="submit" name="login">Sign In</button>
+            <a class="btn btn-warning btn-sm" href="index1.php" role="button">Join Us</a>
             <a href="">Forgot Password?</a>
             </form>
             </div>
             <div class="clearfix"></div>
-        </div>
-        <div id="sectionB" class="tab-pane fade">
-            <div class="innter-form">
-            <form class="sa-innate-form" method="post">
-            <input type="text" name="username" placeholder="Username">
-            <input type="text" name="email" placeholder="Email">
-            <input type="password" name="password_1" placeholder="Password">
-            <input type="password" name="password_2" placeholder="Confirm password">
-            <button type="submit" name="join_us">Join now</button>
-            <h5>By clicking Join now, you agree with <br>RUi-Tech's User Agreement, Privacy Policy, and Cookie Policy.</h5>
-            </form>
-            </div>
-        </div>
+        
     </div>
     </div>
 </div>
@@ -582,35 +536,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <section class="team pt-5" id="gallery">
         <div class="container py-lg-5">
             <h3 class="heading mb-sm-5 mb-4">Gallery</h3>
-            <!-- <div class="row">
-                <div class="team-grid col-md-3 col-sm-6 mb-5">
-                    <img src="images/team1.jpg" class="" alt="" />
-                    <div class="team-info text-center">
-                        <h3 class="e">Tyson Amery</h3>
-                        <span class="">Maths Teacher</span>
-                    </div>
-                </div>
-                <div class="team-grid col-md-3 col-sm-6 mb-5">
-                    <img src="images/team2.jpg" class="" alt="" />
-                    <div class="team-info text-center">
-                        <h3 class="">Stas Melnik</h3>
-                        <span class="">English Teacher</span>
-                    </div>
-                </div>
-                <div class="team-grid col-md-3 col-sm-6 mb-5">
-                    <img src="images/team3.jpg" class="" alt="" />
-                    <div class="team-info text-center">
-                        <h3 class="">Lise Laurie</h3>
-                        <span class="">Physics Teacher</span>
-                    </div>
-                </div>
-                <div class="team-grid col-md-3 col-sm-6 mb-5">
-                    <img src="images/team4.jpg" class="" alt="" />
-                    <div class="team-info text-center">
-                        <h3 class="">Effie Eleanora</h3>
-                        <span class="">History Teacher</span>
-                    </div>
-                </div> -->
 
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
@@ -646,7 +571,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </a>
             </div>
 
-            <a href="Gallery.html" style="margin-left: 500px" class="btn btn-banner my-3">View More</a>
+            <a href="Gallery.php" style="margin-left: 500px" class="btn btn-banner my-3">View More</a>
 
             <!-- </div> -->
         </div>
