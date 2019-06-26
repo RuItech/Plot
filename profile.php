@@ -11,6 +11,9 @@ $username="";
 $email="";
 $gender="";
 $phone="";
+$course="";
+$specialization="";
+$interest="";
 $hh =  $_SESSION['email'];
 $res = $db->query("SELECT * FROM members WHERE email='$hh'" );
 while($userRow = mysqli_fetch_array($res, MYSQLI_ASSOC)){
@@ -19,6 +22,9 @@ while($userRow = mysqli_fetch_array($res, MYSQLI_ASSOC)){
         $email = $userRow['email'];
         $gender = $userRow['gender'];
         $phone = $userRow['phone'];
+        $course=$userRow['course'];
+        $specialization=$userRow['specialization'];
+        $interest=$userRow['interest'];
 }
 ?> 
 
@@ -141,34 +147,58 @@ while($userRow = mysqli_fetch_array($res, MYSQLI_ASSOC)){
                                        
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Name</label>
+                                                <label>Name:</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p><?php echo $username ?></p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Email</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p><?php echo $email ?></p>
+                                                <p><?php echo $username ?></p><br>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Phone</label>
+                                                <label>Email:</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p><?php echo $phone ?></p>
+                                                <p><?php echo $email ?></p><br>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Phone:</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p><?php echo $phone ?></p><br>
                                             </div>
                                         </div>
                                           <div class="row">
                                             <div class="col-md-6">
-                                                <label>Gender</label>
+                                                <label>Gender:</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p><?php echo $gender ?></p>
+                                                <p><?php echo $gender ?></p><br>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Course:</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p><?php echo $course ?></p><br>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Specialization:</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p><?php echo $specialization ?></p><br>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Interest:</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p><?php echo $interest ?></p>
                                             </div>
                                         </div>
                                        

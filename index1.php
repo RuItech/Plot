@@ -102,6 +102,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
      <link href="css/form.css" rel="stylesheet">
+     <link href="whatsapp.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -123,8 +124,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li class="mr-3">
                         <span class="fa fa-angellist"></span>For Any inquiry refer to our email</li>
                     <li>
-                        <span class="fa fa-envelope-open"></span> <a href="ruitech@riarauniversity.ac.ke">ruitech@riarauniversity.ac.ke</a> </li>
+                        <span class="fa fa-envelope-open"></span> <a href="mailto: ruitech@riarauniversity.ac.ke">ruitech@riarauniversity.ac.ke</a>
+
+                    </li>
+                    <li>
+                    <h5>"OR"</h5>
+                </li>
+                    <li>
+                        <span class="fa fa-whatsapp"></span><a href="https://wa.me/254702710739" target="_blank">Whatsapp Us</a> 
+                    </li>
                 </ul>
+                 
+                
             </div>
         </div>
         <div class="container">
@@ -322,28 +333,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="container">
             <h3 class="heading mb-5">Our Services</h3>
             <div class="row ml-sm-5">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="our-services-wrapper mb-60">
                         <div class="services-inner">
                             <div class="our-services-img">
-                                <img src="images/s1.png" alt="">
+                                <img src="images/s4.png" alt="">
                             </div>
                             <div class="our-services-text">
-                                <h4>Quality Education</h4>
-                                <p>Proin varius pellentesque nunc tincidunt ante. Init id lacus</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="our-services-wrapper mb-60">
-                        <div class="services-inner">
-                            <div class="our-services-img">
-                                <img src="images/s2.png" alt="">
-                            </div>
-                            <div class="our-services-text">
-                                <h4>Experienced Staff</h4>
-                                <p>Proin varius pellentesque nunc tincidunt ante. Init id lacus</p>
+                                <h4>Monthly Innovation</h4>
+                                <p>Among the goals of RU i-Tech is to encourage people with innovative ideas to make their ideas come to life. To accomplish that, RU i-Tech staffs are always on their toes on preparation of the venue, invitation of speakers from different industries and allowing audience to show up during the Forum.</p>
                             </div>
                         </div>
                     </div>
@@ -361,24 +359,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="our-services-wrapper mb-60">
                         <div class="services-inner">
                             <div class="our-services-img">
-                                <img src="images/s4.png" alt="">
-                            </div>
-                            <div class="our-services-text">
-                                <h4>Monthly Innovation</h4>
-                                <p>Among the goals of RU i-Tech is to encourage people with innovative ideas to make their ideas come to life. To accomplish that, RU i-Tech staffs are always on their toes on preparation of the venue, invitation of speakers from different industries and allowing audience to show up during the Forum.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="our-services-wrapper mb-60">
-                        <div class="services-inner">
-                            <div class="our-services-img">
-                                <img src="images/s5.png" alt="">
+                                 <img src="images/s2.png" alt="">
                             </div>
                             <div class="our-services-text">
                                 <h4>Software Development </h4>
@@ -387,23 +372,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="our-services-wrapper mb-60">
-                        <div class="services-inner">
-                            <div class="our-services-img">
-                                <img src="images/s6.png" alt="">
-                            </div>
-                            <div class="our-services-text">
-                                <h4>Library Books</h4>
-                                <p>Proin varius pellentesque nunc tincidunt ante. Init id lacus</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+               
             <!-- positioned image -->
             <div class="position-image">
-                <img src="images/graduation.jpg" alt="" class="img-fluid">
+                <img src="images/tech.jpg" alt="" class="img-fluid">
             </div>
             <!-- //positioned image -->
         </div>
@@ -411,46 +383,50 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- //services -->
 
     <!-- stats section -->
-    <section class="section-stats" id="stats">
+  <section class="section-stats" id="stats">
         <div class="py-5">
             <div class="container py-lg-5">
                 <h3 class="heading mb-sm-5 mb-4">Our statistics</h3>
                 <div class="row text-center">
-                    <div class="col-lg-3 col-6">
-                        <div class="w3layouts_stats_left w3_counter_grid">
+                <div class="col-lg-3 col-6">
+                   <div class="w3layouts_stats_left w3_counter_grid">
                             <div class="stats-icon">
-                                <span class="fa fa-credit-card"></span>
+                                <span class="fa fa-users"></span>
                             </div>
-                            <p class="counter">1568</p>
-                            <p class="para-text-w3ls">Students Enrolled</p>
+                        <?php 
+                        require_once("connect.php");
+                        $sql="SELECT username FROM members";
+                              if ($count=mysqli_query($db,$sql))
+                             {
+          // Return the number of rows in result set
+                              $rowcount=mysqli_num_rows($count);
+
+                            }
+   
+                              mysqli_close($db);
+                       ?>
+                            <p class="counter"><?php echo $rowcount ?></p>
+                            <p class="para-text-w3ls">Members Enrolled</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-6">
                         <div class="w3layouts_stats_left w3_counter_grid2">
                             <div class="stats-icon">
-                                <span class="fa fa-users"></span>
+                                <span class="fa fa-wrench"></span>
                             </div>
-                            <p class="counter">1900</p>
-                            <p class="para-text-w3ls">Professional Teachers</p>
+                            <p class="counter">2</p>
+                            <p class="para-text-w3ls">Projects On Developemt</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-6 mt-lg-0 mt-4">
                         <div class="w3layouts_stats_left w3_counter_grid1">
                             <div class="stats-icon">
-                                <span class="fa fa-dollar"></span>
+                                <span class="fa fa-check-circle"></span>
                             </div>
-                            <p class="counter">1422</p>
-                            <p class="para-text-w3ls">Classes Conducted</p>
+                            <p class="counter">0</p>
+                            <p class="para-text-w3ls">Completed Projects</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-6 mt-lg-0 mt-4">
-                        <div class="w3layouts_stats_left w3_counter_grid1">
-                            <div class="stats-icon">
-                                <span class="fa fa-users"></span>
-                            </div>
-                            <p class="counter">400</p>
-                            <p class="para-text-w3ls">Media Followers</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -513,7 +489,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </p>
                             </div>
                             <div class="testi-pos">
-                                <img src="images/ts1.jpg" alt="" class="img-fluid rounded-circle mb-3" />
+                                <img src="images/kara.png" alt="" class="img-fluid rounded-circle mb-3" />
                                 <h4> Karagania Mwamlole </h4>
                             </div>
                         </div>
@@ -526,7 +502,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </p>
                             </div>
                             <div class="testi-pos">
-                                <img src="images/ts2.jpg" alt="" class="img-fluid rounded-circle mb-3" />
+                                <img src="images/njoroge.jpg" alt="" class="img-fluid rounded-circle mb-3" />
                                 <h4>Godfrey Njoroge</h4>
                             </div>
                         </div>
@@ -591,15 +567,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img src="images/style1.jpg" alt="Los Angeles" style="width:100%, height:50%">
+                        <a href="gallery.php"><img src="images/style1.jpg" alt="Los Angeles" style="width:100%, height:50%"></a>
                     </div>
 
                     <div class="item">
-                        <img src="images/style2.jpg" alt="Chicago" style="width:100%, height:50%">
+                        <a href="gallery.php"><img src="images/style2.jpg" alt="Chicago" style="width:100%, height:50%"></a>
                     </div>
 
                     <div class="item">
-                        <img src="images/style3.jpg" alt="New york" style="width:100%, height:50%">
+                        <a href="gallery.php"><img src="images/style3.jpg" alt="New york" style="width:100%, height:50%"></a>
                     </div>
                 </div>
 
@@ -653,9 +629,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="footer-title mb-3">
                         <a href="#"><img src="images/s2.png" alt=""> RU i-TECH</a>
                     </div>
-                    <div class="footer-text">
+                    <!-- <div class="footer-text">
                         <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ipnut libero malesuada feugiat. Lorem ipsum dolor sit amet, consectetur elit.</p>
-                    </div>
+                    </div> -->
                     <ul class="social_section_1info">
                         <li class="mb-2 facebook"><a href="#"><span class="fa fa-facebook"></span></a></li>
                         <li class="mb-2 twitter"><a href="#"><span class="fa fa-twitter"></span></a></li>
@@ -681,9 +657,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li><a href="#testi" class="">Testimonials </a></li>
                 </ul>
                 <div class="col-lg-6 copy-right p-0">
-                    <p class="">© 2019 RU i-TECH. All rights reserved | Design by
-                        <a href="http://w3layouts.com"> R4M80.</a>
-                    </p>
+                    <p class="">© 2019 RU i-TECH. All rights reserved</p>
                 </div>
             </div>
         </div>
@@ -696,7 +670,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <span class="fa fa-angle-up  mb-3" aria-hidden="true"></span>
         </a>
     </div>
-    <!-- move top -->
+    <!-- Whatsapp floating icon-->
+<a href="https://wa.me/254702710739" class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
 
 </body>
 

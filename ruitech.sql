@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 25, 2019 at 01:43 PM
+-- Generation Time: Jun 26, 2019 at 09:53 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -25,6 +25,34 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `courses`
+--
+
+DROP TABLE IF EXISTS `courses`;
+CREATE TABLE IF NOT EXISTS `courses` (
+  `course_id` varchar(70) NOT NULL,
+  `course_name` varchar(70) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `courses`
+--
+
+INSERT INTO `courses` (`course_id`, `course_name`) VALUES
+('JOURNALISM', 'JOURNALISM'),
+('LLB', 'LLB'),
+('IR', 'IR'),
+('EDUCATION', 'EDUCATION'),
+('BBA', 'BBA'),
+('ETHICAL HACKING', 'ETHICAL HACKING'),
+('DBIT', 'DBIT'),
+('DCS', 'DCS'),
+('DIT', 'DIT'),
+('DBA', 'DBA');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `members`
 --
 
@@ -36,6 +64,10 @@ CREATE TABLE IF NOT EXISTS `members` (
   `gender` varchar(25) NOT NULL,
   `phone` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `course` varchar(50) DEFAULT NULL,
+  `specialization` varchar(50) DEFAULT NULL,
+  `interest` varchar(50) DEFAULT NULL,
+  `picture` blob,
   PRIMARY KEY (`user_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
@@ -43,8 +75,8 @@ CREATE TABLE IF NOT EXISTS `members` (
 -- Dumping data for table `members`
 --
 
-INSERT INTO `members` (`user_id`, `username`, `email`, `gender`, `phone`, `password`) VALUES
-(3, 'Owdenpk', 'owden.kimaro@riarauniversity.ac.ke', 'Male', '254790921553', '0c14cefec9476562948d928ef34b7e5bc72c4a13');
+INSERT INTO `members` (`user_id`, `username`, `email`, `gender`, `phone`, `password`, `course`, `specialization`, `interest`, `picture`) VALUES
+(3, 'Owdenpk', 'owden.kimaro@riarauniversity.ac.ke', 'Male', '254790921553', '0c14cefec9476562948d928ef34b7e5bc72c4a13', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 

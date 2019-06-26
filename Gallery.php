@@ -36,6 +36,7 @@ session_start();
     <!-- custom css -->
     <!-- <link href="css/css_slider.css" type="text/css" rel="stylesheet" media="all"> -->
     <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="whatsapp.css" rel="stylesheet">
 
   </head>
   <body style="background-color: #1F1D1D">
@@ -70,11 +71,19 @@ session_start();
     <header>
         <div class="top-head container">
             <div class="ml-auto text-right right-p">
-                <ul>
+               <ul>
                     <li class="mr-3">
                         <span class="fa fa-angellist"></span>For Any inquiry refer to our email</li>
                     <li>
-                        <span class="fa fa-envelope-open"></span> <a href="mailto:info@example.com">info@example.com</a> </li>
+                        <span class="fa fa-envelope-open"></span> <a href="mailto: ruitech@riarauniversity.ac.ke">ruitech@riarauniversity.ac.ke</a>
+
+                    </li>
+                    <li>
+                    <h5>"OR"</h5>
+                </li>
+                    <li>
+                        <span class="fa fa-whatsapp"></span><a href="https://wa.me/254702710739" target="_blank">Whatsapp Us</a> 
+                    </li>
                 </ul>
             </div>
         </div>
@@ -262,6 +271,11 @@ session_start();
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js1/google-map.js"></script>
   <script src="js1/main.js"></script>
+
+<!-- Whatsapp floating icon -->
+<a href="https://wa.me/254702710739" class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
     
   </body>
 </html>
