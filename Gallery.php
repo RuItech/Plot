@@ -198,6 +198,128 @@ session_start();
 								</div>
 							</a>
 						</div>
+
+						<div class="col-md-4 ftco-animate">
+							<a href="images/lol/pic1.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(images/lol/pic1.jpg);">
+								<div class="overlay"></div>
+								<div class="text text-center">
+									<h3>MMU ICT Museum</h3>
+									<span class="tag">2017</span>
+								</div>
+							</a>
+						</div>
+
+						<div class="col-md-4 ftco-animate">
+							<a href="images/lol/pic2.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(images/lol/pic2.jpg);">
+								<div class="overlay"></div>
+								<div class="text text-center">
+									<h3>RUi-Tech Meeting</h3>
+									<span class="tag">2018</span>
+								</div>
+							</a>
+						</div>
+
+						<div class="col-md-4 ftco-animate">
+							<a href="images/lol/pic4.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(images/lol/pic4.jpg);">
+								<div class="overlay"></div>
+								<div class="text text-center">
+									<h3>IEEE Event held in Riara</h3>
+									<span class="tag">2018</span>
+								</div>
+							</a>
+						</div>
+
+						<div class="col-md-4 ftco-animate">
+							<a href="images/lol/pic5.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(images/lol/pic5.jpg);">
+								<div class="overlay"></div>
+								<div class="text text-center">
+									<h3>MMU ICT Museum</h3>
+									<span class="tag">2017</span>
+								</div>
+							</a>
+						</div>
+
+						<div class="col-md-4 ftco-animate">
+							<a href="images/lol/pic6.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(images/lol/pic6.jpg);">
+								<div class="overlay"></div>
+								<div class="text text-center">
+									<h3>RUi-Tech Meeting</h3>
+									<span class="tag">2018</span>
+								</div>
+							</a>
+						</div>
+
+						<div class="col-md-4 ftco-animate">
+							<a href="images/lol/pic7.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(images/lol/pic7.jpg);">
+								<div class="overlay"></div>
+								<div class="text text-center">
+									<h3>#Random</h3>
+									<span class="tag">2018</span>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="col-md-4 ftco-animate">
+							<a href="images/lol/pic9.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(images/lol/pic9.jpg);">
+								<div class="overlay"></div>
+								<div class="text text-center">
+									<h3>Trip to KenGen(NAIVASHA)</h3>
+									<span class="tag">2018</span>
+								</div>
+							</a>
+						</div>
+
+						<div class="col-md-4 ftco-animate">
+							<a href="images/lol/pic10.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(images/lol/pic10.jpg);">
+								<div class="overlay"></div>
+								<div class="text text-center">
+									<h3>Trip to KenGen(NAIVASHA)</h3>
+									<span class="tag">2018</span>
+								</div>
+							</a>
+						</div>
+
+						<div class="col-md-4 ftco-animate">
+							<a href="images/lol/pic11.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(images/lol/pic11.jpg);">
+								<div class="overlay"></div>
+								<div class="text text-center">
+									<h3>Trip to KenGen(NAIVASHA)</h3>
+									<span class="tag">2018</span>
+								</div>
+							</a>
+						</div>
+
+						<div class="col-md-4 ftco-animate">
+							<a href="images/lol/pic12.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(images/lol/pic12.jpg);">
+								<div class="overlay"></div>
+								<div class="text text-center">
+									<h3>Trip to KenGen(NAIVASHA)</h3>
+									<span class="tag">2018</span>
+								</div>
+							</a>
+						</div>
+
+						<div class="col-md-4 ftco-animate">
+							<a href="images/lol/pic8.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(images/lol/pic8.jpg);">
+								<div class="overlay"></div>
+								<div class="text text-center">
+									<h3>Andela Audition</h3>
+									<span class="tag">2017</span>
+								</div>
+							</a>
+						</div>
+
+						<div class="col-md-4 ftco-animate">
+							<a href="images/lol/pic3.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(images/lol/pic3.jpg);">
+								<div class="overlay"></div>
+								<div class="text text-center">
+									<h3>Andela Audition</h3>
+									<span class="tag">2017</span>
+								</div>
+							</a>
+						</div>
+
 					</div>
 				</div>
 			</section>

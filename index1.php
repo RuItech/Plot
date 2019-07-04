@@ -131,7 +131,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <h5>"OR"</h5>
                 </li>
                     <li>
-                        <span class="fa fa-whatsapp"></span><a href="https://wa.me/254702710739" target="_blank">Whatsapp Us</a> 
+                        <span class="fa fa-whatsapp"></span><a href="https://chat.whatsapp.com/GF5dXgF0v60EvYsj9aFtxw" target="_blank">Whatsapp Us</a> 
                     </li>
                 </ul>
                  
@@ -179,7 +179,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         <div class="w3ls_banner_txt">
                                             <h3 class="b-w3ltxt text-capitalize mt-md-4">WELCOME!</h3>
                                             <h4 class="b-w3ltxt text-capitalize mt-md-2">Get Inspired By Technology</h4>
-                                            <p class="w3ls_pvt-title my-3">-Information technology and business are becoming inextricably interwoven. I don’t think anybody can talk meaningfully about one without the talking about the other. “Bill Gates”.</p>
+                                            <p class="w3ls_pvt-title my-3">Information technology and business are becoming inextricably interwoven. I don’t think anybody can talk meaningfully about one without the talking about the other. <b>“Bill Gates”.</b></p>
                                             <a href="#about" class="btn btn-banner my-3">Read More</a>
                                         </div>
                                     </div>
@@ -187,9 +187,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <li>
                                     <div class="container-fluid">
                                         <div class="w3ls_banner_txt">
-                                            <h3 class="b-w3ltxt text-capitalize mt-md-4">Education Courses.</h3>
-                                            <h4 class="b-w3ltxt text-capitalize mt-md-2">Study For Better Future</h4>
-                                            <p class="w3ls_pvt-title my-3">onec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus semper Nullam dui mi. Vestibulum ante. Morbi at dui nisl.</p>
+                                            <h3 class="b-w3ltxt text-capitalize mt-md-4">Be Innovative Today.</h3>
+                                            <h4 class="b-w3ltxt text-capitalize mt-md-2">And make the better future</h4>
+                                            <p class="w3ls_pvt-title my-3">  If you get up in the morning and think the future is going to be better, it is a bright day. Otherwise, its not. <b>“Elon Musk”.</b></p>
                                             <a href="#about" class="btn btn-banner my-3">Read More</a>
                                         </div>
                                     </div>
@@ -197,9 +197,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <li>
                                     <div class="container-fluid">
                                         <div class="w3ls_banner_txt">
-                                            <h3 class="b-w3ltxt text-capitalize mt-md-4">Education Courses.</h3>
-                                            <h4 class="b-w3ltxt text-capitalize mt-md-2">Study For Better Future</h4>
-                                            <p class="w3ls_pvt-title my-3">onec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus semper Nullam dui mi. Vestibulum ante. Morbi at dui nisl.</p>
+                                            <h3 class="b-w3ltxt text-capitalize mt-md-4">Creativity</h3>
+                                            <h4 class="b-w3ltxt text-capitalize mt-md-2">Think out of the box</h4>
+                                            <p class="w3ls_pvt-title my-3"> I think frugality drives innovation just like other constraints do. One of the only ways to get out of a tight box is to invent your way out. <b>“Jeff Bezos”</b></p>
                                             <a href="#about" class="btn btn-banner my-3">Read More</a>
                                         </div>
                                     </div>
@@ -225,7 +225,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
      $remarks  =  isset($_GET['remark_signup'])  ?  $_GET['remark_signup']  :  '';
      if  ($remarks==null  and  $remarks=="")
      {
-      echo  '<div class="panel panel-default panel-heading text-center" style="background-color: #3D7DDE"><b>Registration Form</b></div>';
+      echo  '<div class="panel panel-default panel-heading text-center" style="background-color: #3D7DDE"><b>Join Us Today</b></div>';
     }
     if  ($remarks=='failed')
     {
@@ -273,7 +273,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="container py-lg-5">
             <h2 class="heading mb-sm-5 mb-4"> ABOUT</h2>
             <div class="row bottom-grids">
-                <div class="col-md-3 col-sm-6">
+                <!-- <div class="col-md-3 col-sm-6">
                     <div class="three-grids-w3pvt-1 d-flex text-right">
                         <div class="text-effect-wthree midd-text-w3ls p-3 w-100">
                             <h5 class="text-capitalize text-bl font-weight-bold">HISTORY</h5>
@@ -303,9 +303,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <h5 class="text-capitalize text-bl font-weight-bold">Success</h5>
                             <p>Education</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="col-lg-5">
+                <div class="col-lg-10">
                     <p class="mt-4"><b><em>OBJECTIVES</em></b></br>
                         As RU i-Tech we value innovation, teamwork, honesty, equality, leadership, respect, integrity of services and technology. We pride ourselves to working as a team to achieve success.
                         We push boundaries by letting each member freely expressing their innovative idea/ projects through monthly innovation and helping each other on venturing those ideas.
@@ -495,15 +495,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                         <div class="col-md-6 mt-md-0 mt-5">
                             <div class="testi-info-text">
-                                <h4>Best Education i have ever seen</h4>
+                                <h4>Real world skills</h4>
                                 <p>
-                                    <span class="fa fa-quote-left"></span> Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat.Nulla quis lorem ut libero malesuada feugiat. Donec rutrum.
+                                    <span class="fa fa-quote-left"></span> RU i-Tech gives members a real platform where they can horn skills learnt in books and lecture rooms. The organization focuses on absolute transformation of a member from being theoretically competent to being technically and technologically astute. This is achieved by impacting the members with innovative, team work, programming, business and project management skills that are rarely taught in full measure in a class setting.
                                     <span class="fa ml-2 fa-quote-right"></span>
                                 </p>
                             </div>
                             <div class="testi-pos">
                                 <img src="images/njoroge.jpg" alt="" class="img-fluid rounded-circle mb-3" />
-                                <h4>Godfrey Njoroge</h4>
+                                <h4>Godfrey Njoroge (RUi-Tech Founder)</h4>
                             </div>
                         </div>
                     </div>
@@ -516,7 +516,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- Team  -->
     <section class="team pt-5" id="team">
         <div class="container py-lg-5">
-            <h3 class="heading mb-sm-5 mb-4">Our Staff</h3>
+            <h3 class="heading mb-sm-5 mb-4">Board Of Members</h3>
             <div class="row">
                 <div class="team-grid col-md-3 col-sm-6 mb-5">
                     <img src="images/team1.jpg" class="" alt="" />
@@ -671,7 +671,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </a>
     </div>
     <!-- Whatsapp floating icon-->
-<a href="https://wa.me/254702710739" class="float" target="_blank">
+<!-- <a href="https://wa.me/254702710739" class="float" target="_blank"> -->
+    <a href="https://wa.me/254702710739" class="float" target="_blank">
 <i class="fa fa-whatsapp my-float"></i>
 </a>
 

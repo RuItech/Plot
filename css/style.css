@@ -376,7 +376,7 @@ li > a:only-child:after { content: ''; }
 
 /*-- banner --*/
 .banner {
-    background: url(../images/banner.jpg)no-repeat center;
+    background: url(../images/lol/pic2.jpg)no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -766,7 +766,7 @@ p.para-text-w3ls{
 
 /* -- testimonials --*/
 .testimonials {
-    background: url(../images/testimonials.jpg)no-repeat 0px 0px;
+    background: url(../images/bg_1.jpg)no-repeat 0px 0px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -807,7 +807,7 @@ subscribe form {
 }
 
 footer {
-    background: url(../images/footer.jpg)no-repeat center;
+    background: url(../images/lol/pic8.jpg)no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1119,7 +1119,7 @@ a.move-top span{
 		padding: 0vw 0vw 10vw 8vw;
 	} 
 	.banner {
-		background: url(../images/banner.jpg)no-repeat -130px 0px;
+		background: url(../images/lol/pic2.jpg)no-repeat -130px 0px;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
