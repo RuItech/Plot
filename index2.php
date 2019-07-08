@@ -207,7 +207,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         
         <div class="innter-form">
             <form class="sa-innate-form" method="post" name="loginform" action="index2.php">
-            <input type="text" name="email" placeholder="Email" required>
+            <input type="text" name="email" placeholder="Email" required autocomplete="on">
             <input type="password" name="password" placeholder="password" required>
             <button type="submit" name="login">Sign In</button>
             <a class="btn btn-warning btn-sm" href="index1.php" role="button">Join Us</a>

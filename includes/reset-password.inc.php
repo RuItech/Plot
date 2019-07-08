@@ -5,16 +5,17 @@ if(isset($_POST['reset-password-submit'])){
 	$validator = $_POST['validator'];
 	$pwd = $_POST['pwd'];
 	$passwordRepeat = $_POST['pwd-repeat'];
+	$m = 0;
 
-	echo $selector;
-	echo $validator;
-	echo $pwd;
-	echo $passwordRepeat;
+	// echo $selector;
+	// echo $validator;
+	// echo $pwd;
+	// echo $passwordRepeat;
 
-	if(empty($password) || empty($passwordRepeat)){
+	if(empty($pwd) || empty($passwordRepeat)){
 		header("location: ../create-new-password.php?newpwd=empty");
 		exit();
-}elseif ($password != $passwordRepeat) {
+}elseif ($pwd != $passwordRepeat) {
 	header("location: ../create-new-password.php?newpwdsame");
 	exit();
 }else{
@@ -25,18 +26,13 @@ $currentDate = date("u");
 
 require '../connect.php';
 
-$sql = "SELECT * FROM pwdReset WHERE pwdResetSelector=? AND pwdResetExpires >= ?";
-$stmt = mysql_stmt_init($db);
-	if(!mysqli_stmt_prepare($stmt, $sql)){
-		echo "There was an error";
-		exit();
-	}else{
-		mysqli_stmt_bind_param($stmt, "ss", $selector, $currentDate);
-		mysqli_stmt_excute($stmt);
+$sql = "SELECT * FROM pwdReset WHERE pwdResetSelector='$selector' AND pwdResetExpires >= '$currentDate'";
 
-		$result = mysqli_stmt_get_result($stmt);
+		
+
+		$result = mysqli_query($db,$sql); 
 		if(!$row = mysqli_fetch_assoc($result)){
-			echo "You need to re-submit your reset request."
+			echo "You need to re-submit your reset request.";
 			exit();
 		}else{
 			$tokenBin = hex2bin($validator);
@@ -47,46 +43,45 @@ $stmt = mysql_stmt_init($db);
 				exit();
 			}elseif ($tokenCheck === true) {
 				$tokenEmail = $row['pwdResetEmail'];
-
-				$sql = "SELECT * FROM members WHERE email = ? "
-				if(!mysqli_stmt_prepare($stmt, $sql)){
-		echo "Technical error, Can't fetch emails";
-		exit();
-	   }else{
-	   	mysqli_stmt_bind_param($stmt, "s", $tokenEmail);
-	   	mysqli_stmt_excute($stmt);
-	   	$result = mysqli_stmt_get_result($stmt);
+$userEmail = $row['pwdResetEmail'];
+				$sql = "SELECT * FROM members WHERE email = '$tokenEmail' ";
+		
+	   	
+	   	$result = mysqli_query($db,$sql);
 		if(!$row = mysqli_fetch_assoc($result)){
-			echo "Email you entered doesn't match our records"
+			echo "Email you entered doesn't match our records";
 			exit();
 		}else{
-			$sql = "UPDATE members SET password=? WHERE
-			email = ?";
-	$stmt = mysql_stmt_init($db);
-	if(!mysqli_stmt_prepare($stmt, $sql)){
-		echo "Can't update the password now";
-		exit();
-	}else{
-		$newPwsHash = sha1($password);
-		mysqli_stmt_bind_param($stmt, "ss", $newPwsHash, $tokenEmail);
-		mysqli_stmt_excute($stmt);
-		$sql = "DELETE FROM pwdReset WHERE pwdResetEmail=?";
-	   $stmt = mysql_stmt_init($db);
-	   if(!mysqli_stmt_prepare($stmt, $sql)){
-		echo "There was an error";
-	    exit();
-	   }else{
-		mysqli_stmt_bind_param($stmt, "s", $userEmail);
-		mysqli_stmt_excute($stmt);
-		header("location: ../index2.php?newpwd=passwordupdated");
-	  }
-
+			$newPwsHash = sha1($pwd);
+			$sql = "UPDATE members SET password='$newPwsHash' WHERE
+			email = '$tokenEmail'";
+	
+		if(mysqli_query($db,$sql)){
+$m+=1;
+$k = "done update";
 		}
+		$sql = "DELETE FROM pwdreset WHERE pwdResetEmail='$userEmail'";
+	 
+		if(mysqli_query($db,$sql)){
+			$m+=1;
+			$k = "done delete";
+		
+	}
+	if($m==2){
+		
+		header("location: ../index2.php?newpwd=passwordupdated");
+	}
+	else{
+		echo  $k;
+	}
+	  
+
+		
 	          }
-			}
+			
 		}
 	}
-}
+
 }else{
 	header("location: ../index2.php");
 }
